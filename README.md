@@ -24,15 +24,15 @@ $ DATA=/path/to/dataset python train.py --world_size=WORLD_SIZE \
                                         --port=MASTER_PORT \
                                         --config=CONFIG_FILE
 ```
-It is also recommended to start training with torchrun as:
+It is also recommended to start training with `torchrun` as:
 
 ```
-$ DATA=/path/to/dataset python train.py --world_size=WORLD_SIZE \
-                                        --rank=RANK \
-                                        --local_rank=LOCAL_RANK \
-                                        --host=MASTER_IP_ADDRESS \
-                                        --port=MASTER_PORT \
-                                        --config=CONFIG_FILE
+$ DATA=/path/to/dataset torchrun --nproc_per_node=NUM_GPUS_PER_NODE \
+                                 --nnodes=NUM_NODES \
+                                 --node_rank=NODE_RANK \
+                                 --master_addr=MASTER_IP_ADDRESS \
+                                 --master_port=MASTER_PORT \
+                                 train.py --config=CONFIG_FILE
 ```
 
 
