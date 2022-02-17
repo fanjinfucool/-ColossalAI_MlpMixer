@@ -5,7 +5,7 @@ This project is the reproduction of MlpMixer model with ColossalAI tool.
 
 | Task       | Model          | 	Training Time |  Top-1 Accuracy |
 | ------------- |:-------------:| -----:| -----:|
-| CIFAR10     |ColossalAI_MlpMixer | ~ 16 min |  ~ 89.42% |
+| CIFAR10     |ColossalAI_MlpMixer | ~ 30 min |  ~ 89.42% |
 
 
 
